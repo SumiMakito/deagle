@@ -1,9 +1,10 @@
 package com.oasisfeng.android.databinding.recyclerview;
 
-import android.databinding.ViewDataBinding;
+import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
- * The binder interface for items in {@link android.support.v7.widget.RecyclerView}.
+ * The binder interface for items in {@link RecyclerView}.
  *
  * Created by Oasis on 2016/2/14.
  */

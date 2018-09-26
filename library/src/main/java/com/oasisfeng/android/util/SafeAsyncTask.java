@@ -6,7 +6,6 @@ import android.app.Fragment;
 import android.os.AsyncTask;
 import android.os.Build.VERSION;
 import android.os.Build.VERSION_CODES;
-import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 
 import java.lang.ref.WeakReference;
@@ -14,6 +13,8 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.concurrent.Executor;
 import java.util.concurrent.ThreadPoolExecutor;
+
+import androidx.fragment.app.FragmentActivity;
 
 /**
  * Protect against NPE when calling {@link Fragment#getActivity()} in {@link AsyncTask}.
@@ -53,10 +54,10 @@ public abstract class SafeAsyncTask<Params, Progress, Result> extends AsyncTask<
 		}}, runnable));
 	}
 
-	public static void execute(final android.support.v4.app.Fragment fragment, final Consumer<FragmentActivity> runnable) {
-		final WeakReference<android.support.v4.app.Fragment> fragment_reference = new WeakReference<>(fragment);
+	public static void execute(final androidx.fragment.app.Fragment fragment, final Consumer<FragmentActivity> runnable) {
+		final WeakReference<androidx.fragment.app.Fragment> fragment_reference = new WeakReference<>(fragment);
 		AsyncTask.execute(new SafeTask<>(new Supplier<FragmentActivity>() { @Override public FragmentActivity get() {
-			final android.support.v4.app.Fragment fragment = fragment_reference.get();
+			final androidx.fragment.app.Fragment fragment = fragment_reference.get();
 			return fragment == null ? null : fragment.getActivity();
 		}}, runnable));
 	}

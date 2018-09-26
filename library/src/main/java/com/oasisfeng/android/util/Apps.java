@@ -8,8 +8,6 @@ import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.net.Uri;
 import android.os.Process;
-import android.support.annotation.CheckResult;
-import android.support.annotation.Nullable;
 import android.util.Log;
 
 import com.oasisfeng.android.google.GooglePlayStore;
@@ -17,6 +15,9 @@ import com.oasisfeng.android.google.GooglePlayStore;
 import java.lang.reflect.Field;
 import java.util.Arrays;
 import java.util.Collection;
+
+import androidx.annotation.CheckResult;
+import androidx.annotation.Nullable;
 
 import static android.content.Intent.CATEGORY_LAUNCHER;
 import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;

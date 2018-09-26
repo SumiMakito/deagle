@@ -1,9 +1,10 @@
 package com.oasisfeng.android.databinding.recyclerview;
 
-import android.support.annotation.LayoutRes;
+import androidx.annotation.LayoutRes;
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
- * The layout selector interface for items in {@link android.support.v7.widget.RecyclerView}.
+ * The layout selector interface for items in {@link RecyclerView}.
  *
  * Created by Oasis on 2017/1/16.
  */

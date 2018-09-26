@@ -3,10 +3,11 @@ package com.oasisfeng.android.os;
 import android.os.Parcel;
 import android.os.Process;
 import android.os.UserHandle;
-import android.support.annotation.VisibleForTesting;
 import android.util.Pair;
 
 import com.oasisfeng.android.annotation.UserIdInt;
+
+import androidx.annotation.VisibleForTesting;
 
 import static android.os.Build.VERSION.SDK_INT;
 import static android.os.Build.VERSION_CODES.N;

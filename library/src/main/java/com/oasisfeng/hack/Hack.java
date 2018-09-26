@@ -1,8 +1,8 @@
 package com.oasisfeng.hack;
 
-import android.support.annotation.CheckResult;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.CheckResult;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.util.Log;
 
 import com.oasisfeng.android.util.Supplier;
@@ -818,8 +818,8 @@ public class Hack {
 	public interface Hacking<T> { T hack(); }
 	private static final Hack.HackedClass<?> FALLBACK = new HackedClass<>(ANY_TYPE);
 
-	public static ConditionalHack onlyIf(final boolean condition) {
-		return condition ? new ConditionalHack() {
+	public static ConditionalHack onlyIf(final boolean cond) {
+		return cond ? new ConditionalHack() {
 			@Override public <T> HackedClass<T> into(@NonNull final Class<T> clazz) {
 				return Hack.into(clazz);
 			}
